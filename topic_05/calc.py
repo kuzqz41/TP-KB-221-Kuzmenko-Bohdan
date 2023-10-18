@@ -20,7 +20,5 @@ while 1:
                 print ("a / b = ",div(a,b))
             case "exit":
                 break
-            case _:
-                print ("Ви ввели неправильний знак")
     except ZeroDivisionError:
         print ("Ділити на нуль не можна")

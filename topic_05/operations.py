@@ -5,4 +5,9 @@ def GetInt(promt:str):
         except ValueError:
             print ("Неправильні дані")
 def GetOp(promt:str):
-    return str(input(promt))
+    while 1:
+        x = str(input(promt))
+        if (x != "+" and  x != "-" and x != "*" and x != "/" and x != "exit"):
+            print ("Ви ввели неправильний знак")
+        else:
+            return x

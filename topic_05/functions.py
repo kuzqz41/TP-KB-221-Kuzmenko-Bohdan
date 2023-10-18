@@ -5,4 +5,7 @@ def minus(a,b):
 def mult(a,b):
     return a * b
 def div(a,b):
-    return a / b
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Ділити на нуль не можна"
