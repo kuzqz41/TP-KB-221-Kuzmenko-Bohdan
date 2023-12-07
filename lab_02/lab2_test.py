@@ -15,10 +15,10 @@ def test_create():
 def test_update():
     assert updateElement("qwe", '321') == [{'Name': 'asd', 'Phone': '456'}, {'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '789'}]
     assert updateElement("asd", '654') == [{'Name': 'asd', 'Phone': '654'}, {'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '789'}]
-    assert updateElement("zxc", '993') == [{'Name': 'asd', 'Phone': '654'}, {'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '993'}]
+    assert updateElement("zxc", '987') == [{'Name': 'asd', 'Phone': '654'}, {'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '987'}]
 
 def test_delete():
-    assert deleteElement("asd") == [{'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '993'}]
+    assert deleteElement("asd") == [{'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '987'}]
 
 def test_save():
     saveAllList("lab2_test.csv")
@@ -27,4 +27,4 @@ def test_save():
         reader = csv.DictReader(file)
         for row in reader:
             list.append({"Name":row["Name"], "Phone":row["Phone"]})
-    assert list == [{'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '993'}]
+    assert list == [{'Name': 'qwe', 'Phone': '321'}, {'Name': 'zxc', 'Phone': '987'}]
